@@ -1,0 +1,30 @@
+
+<div style="align-items: center; margin-left: 20%; margin-top: 9%;
+margin-right: 10%;">
+    <h6 style="text-align: center;">Monthly Sales</h6>
+<table class="table table-striped" >
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Month</th>
+    <th scope="col">Sale</th>
+    <th scope="col">Demand</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let graph of graphs; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>
+      
+      {{ graph.month }}
+    </td>
+    <td>{{ graph.sale | number }}</td>
+    <td>{{ graph.upload | number }}</td>
+  </tr>
+  </tbody>
+</table>
+<br>
+<a class="btn " routerLink="/charts" 
+rpouterActive="active"
+ role="button" style="color: blue;"><code>See Chart For this TAble</code></a>
+    </div>
