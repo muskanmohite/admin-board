@@ -13,6 +13,14 @@ import { FormsComponent } from './forms/forms.component';
 import { TableComponent } from './table/table.component';
 import { PagesComponent } from './pages/pages.component';
 import { DocsComponent } from './docs/docs.component';
+import { BootstrapElementsComponent } from './uielement/bootstrap-elements/bootstrap-elements.component';
+import { FontIconComponent } from './uielement/font-icon/font-icon.component';
+import { CardComponent } from './uielement/card/card.component';
+import { WidgetComponent } from './uielement/widget/widget.component';
+import { FormComponentComponent } from './forms/form-component/form-component.component';
+import { CustomComponentComponent } from './forms/custom-component/custom-component.component';
+import { FormSampleComponent } from './forms/form-sample/form-sample.component';
+import { FormNotificationComponent } from './forms/form-notification/form-notification.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +32,15 @@ import { DocsComponent } from './docs/docs.component';
     FormsComponent,
     TableComponent,
     PagesComponent,
-    DocsComponent
+    DocsComponent,
+    BootstrapElementsComponent,
+    FontIconComponent,
+    CardComponent,
+    WidgetComponent,
+    FormComponentComponent,
+    CustomComponentComponent,
+    FormSampleComponent,
+    FormNotificationComponent
   ],
   imports: [
     BrowserModule,
