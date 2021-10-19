@@ -20,23 +20,23 @@ import { FormNotificationComponent } from '../forms/form-notification/form-notif
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent  },
   { path: '',   redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'UI', component: UielementComponent ,children: [
+  { path: 'UI', component: UielementComponent },
    
     { path: 'bootstrap-element', component: BootstrapElementsComponent  },
     { path: 'card', component: CardComponent},
     { path: 'font-icon', component: FontIconComponent},
-    { path: 'widget', component: WidgetComponent}
+    { path: 'widget', component: WidgetComponent},
+
     
-  ] },
   { path: 'charts', component: ChartsComponent  },
-  { path: 'forms', component: FormsComponent ,children: [
+  { path: 'forms', component: FormsComponent },
    
     { path: 'form-component', component: FormComponentComponent  },
     { path: 'custom-component', component: CustomComponentComponent },
     { path: 'form-sample', component: FormSampleComponent},
     { path: 'form-notification', component: FormNotificationComponent }
     
-  ] },
+  ,
   { path: 'table', component: TableComponent  },
   { path: 'docs', component: DocsComponent  },
 

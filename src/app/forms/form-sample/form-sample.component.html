@@ -1,7 +1,202 @@
-<p>form-sample works!</p>
-<div style="align-items: center; margin-left: 20%; margin-top: 9%;">
-    <p style="text-align: center;">sample  works!</p>
+<div style="align-items: center; margin-left: 20%; margin-top: 7%;">
+    
+    <div class="row" style="padding-right: 20px;">
+        <div class="column" >
 
- 
+                 <div class="row">
+                    <div class="col-sm-8">
+                      <div class="card" style="width: 100%; ">
+                        <div class="card-body">
+                          <h5 class="card-title">Vertical form</h5>
+                          <form [formGroup]="forms"  (ngSubmit)="submit('dashboard')" >
+                            
+                            <label for="name">Name</label>
+                                <br>
+                            <input type="text" class="form-control"
+                            formControlName="name" id="name" 
+                            placeholder="Enter your name" 
+                            >
+                            <span *ngIf="(name.dirty || name.touched) && name.invalid" 
+                            >
+                            <div class="text-danger" ng-show="form.errors">
+                             Name is required.
+                           </div> 
+                            </span>
+                            
+                            <label for="email">email</label>
+                            <br>
+                            <input type="text" 
+                            class="form-control"
+                            formControlName="email" 
+                            id="" placeholder="Enter your Email adress">
+                            <span *ngIf="(email.dirty || email.touched) && email.invalid" 
+                            >
+                            <div class="text-danger" ng-show="form.errors">
+                             Email is required.
+                           </div> 
+                            </span>
+                            
+                            <label for="address">Address</label>
+                            <br>
+                            <textarea class="form-control"
+                            formControlName="address"
+                            cols="30" rows="2">
+                            </textarea>
+                            <span *ngIf="(address.dirty || address.touched) && address.invalid" 
+                            >
+                            <div class="text-danger" ng-show="form.errors">
+                                address is required.
+                           </div> 
+                            </span>
+                            
+                            <label for="gender">Gender</label>
+                            <br>
+                              <input type="radio" name="gender" value="Male">
+                              <label for="male">Male</label>
+                              <input type="radio" name="gender" value="female">
+                              <label for="female">Female</label><br>
+                              
+                            <label for="identity">Identity proof</label>
+                            <br>
+                            <input type="file" name="myfile" multiple  class="form-control"
+                            formControlName="idd" required>
+                            
+                            
+
+                            <input type="checkbox" required>
+                           <label for="" > I accept terms & conditions</label><br>
+                            <button class="btn" type="submit"  style="margin-right: 16px; background-color: teal;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" 
+                                height="16" fill="currentColor" class="bi bi-check-lg" 
+                                viewBox="0 0 16 16">
+                                    <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                                  </svg>
+                                  register</button>
+
+                            <button onClick="window.location.reload()"
+                             class="btn" style=" background-color: rgba(88, 88, 88, 0.945);">
+                             <svg  width="16" height="16"
+                                 fill="currentColor" class="bi bi-x" 
+                                 viewBox="0 0 16 16">
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                  </svg>
+                                  cancle</button>
+
+                          </form>
+
+
+
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="col-sm-4" >
+                      <div class="card" style="width: 250%; ">
+                        <div class="card-body">
+                            <h5 class="card-title">Registration</h5>
+
+                            <form [formGroup]="form"  (ngSubmit)="onSubmit('dashboard')" >
+                            
+                                <label for="name1" style=" float: left;">Name</label>
+                                    <span style="display: block;
+                                    overflow: hidden;
+                                    padding: 0px 4px 0px 6px;">
+                                <input type="text" class="form-control"
+                                formControlName="name1"  
+                                placeholder="Enter your name" 
+                                >    
+                            </span>  
+                            <br>                           
+                                <span *ngIf="(name1.dirty || name1.touched) && name1.invalid" 
+                                >
+                                <div class="text-danger" ng-show="form.errors">
+                                 Name is required.
+                               </div> 
+                                </span>
+                                
+                                <label for="email1"  style=" float: left;">email</label>
+                                <span style="display: block;
+                                overflow: hidden;
+                                padding: 0px 4px 0px 6px;">
+                                <input type="text" 
+                                class="form-control"
+                                formControlName="email1" 
+                                placeholder="Enter your Email address">
+                                </span>
+                               <br>
+                                <span *ngIf="(email1.dirty || email1.touched) && email1.invalid" 
+                                >
+                                <div class="text-danger" ng-show="form.errors">
+                                 Email is required.
+                               </div> 
+                                </span>
+                                
+                                <label for="address"  style=" float: left;">Address</label>
+                                <span style="display: block;
+                                overflow: hidden;
+                                padding: 0px 4px 0px 6px;">
+
+                                <textarea class="form-control"
+                                formControlName="address1"
+                                cols="30" rows="2">
+                                </textarea>
+                                <span *ngIf="(address1.dirty || address1.touched) && address1.invalid" 
+                                >
+                                <div class="text-danger" ng-show="form.errors">
+                                    address is required.
+                               </div> 
+                                </span>
+                                </span>
+
+                                <label for="gender">Gender</label>
+                                
+                                  <input type="radio" name="gender" value="Male">
+                                  <label for="male">Male</label> 
+                                  <input type="radio" name="gender" value="female">
+                                  <label for="female">Female</label><br>
+                                  
+                                <label for="identity"  style=" float: left;">Identity proof  
+                                </label>
+                                    <span style="display: block;
+                                    overflow: hidden;
+                                    padding: 0px 4px 0px 6px;">
+                                    <input type="file"  name="myfile" multiple required >
+                                    </span>
+                                
+                                <br>
+    
+                                <input type="checkbox" required >
+                               <label for="" > I accept terms & conditions</label><br>
+                                <button class="btn "  
+                                 type="submit"
+                                style="margin-right: 16px; background-color: teal;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                    width="16" height="16" fill="currentColor" 
+                                    class="bi bi-check-lg" viewBox="0 0 16 16">
+                                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                                      </svg>
+                                      register</button>
+
+
+                               <button onClick="window.location.reload()"
+                                class="btn" style=" background-color: rgba(88, 88, 88, 0.945);">
+                                <svg  width="16" height="16"
+                                 fill="currentColor" class="bi bi-x" 
+                                 viewBox="0 0 16 16">
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                  </svg>
+                                  cancle</button>
+    
+                              </form>
+    
+    
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          
+     
+    </div>
     
     </div>

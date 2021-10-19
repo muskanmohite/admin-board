@@ -21,6 +21,7 @@ import { FormComponentComponent } from './forms/form-component/form-component.co
 import { CustomComponentComponent } from './forms/custom-component/custom-component.component';
 import { FormSampleComponent } from './forms/form-sample/form-sample.component';
 import { FormNotificationComponent } from './forms/form-notification/form-notification.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,13 +41,17 @@ import { FormNotificationComponent } from './forms/form-notification/form-notifi
     FormComponentComponent,
     CustomComponentComponent,
     FormSampleComponent,
-    FormNotificationComponent
+    FormNotificationComponent,
+    
   ],
   imports: [
+    
     BrowserModule,
     NgbModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
